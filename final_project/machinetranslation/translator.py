@@ -21,7 +21,8 @@ language_translator.set_service_url(url)
 def englishToFrench(englishText):
     if englishText=='':
         print('input text is empty')
-        return
+        return None
+    
     translation = language_translator.translate(
         text=englishText,
         model_id='en-fr').get_result()
@@ -31,7 +32,8 @@ def englishToFrench(englishText):
 def frenchToEnglish(frenchText):
     if frenchText=='':
         print('input text is empty')
-        return
+        return None
+
     translation = language_translator.translate(
         text=frenchText,
         model_id='fr-en').get_result()
